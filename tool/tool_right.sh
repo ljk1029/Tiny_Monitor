@@ -70,7 +70,7 @@ function add_copyright_notice() {
     local file=$1
     if [ -f "$file" ]; then
         # 检查文件顶部是否已经包含版权声明
-        if grep -q "Copyright© 2020 Xsense.ai Inc., Xmotors.ai Inc. and Xiaopeng Motors" "$file"; then
+        if grep -q "Copyright© 2023 JK Li. All Rights Reserved." "$file"; then
             echo "Copyright notice already exists in $file"
         else
             echo "$copyright_notice" | cat - "$file" > temp && mv temp "$file"
